@@ -1,0 +1,57 @@
+File    README
+Made by Tristan Carel
+Mail    <tristan.carel@gmail.com>
+
+Copyright (C) 2005 Tristan Carel
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+
+
+	  /*==============================================\
+	  | C++ implementation of the hackermann fonction |
+	  \==============================================*/
+
+/* metaprogramming */
+/* --------------- */
+
+	- `ackermann-meta.hcc'
+
+/* the usual way */
+/* ------------- */
+
+	- `ackermann-naive.cc'
+	- `ackermann-naive.hh'
+
+
+.-------------------------------------.
+| Ackermann fonction has 2 parameters |
+`-------------------------------------'
+
+in order to build binaries computing `Ackermann(3, 2)', just type :
+
+$ make M=3 N=2
+
+There's also an interactive rule:
+
+$ make ask
+
+
+
+for each case, it creates :
+- a binary `acker-%M-%N-meta'
+- `acker-%M-%N-meta.out' which the result of the execution
+- `acker-%M-%N-meta.stats' which contains statistics about compilation
+of the metaprog code.
+- `acker-%M-%N-naive.stats which contains statictics about execution of the
+naive version.
